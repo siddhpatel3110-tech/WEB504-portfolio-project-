@@ -1,0 +1,12 @@
+:root {
+  --color-bg: #0f172a;
+  --color-card: #1e293b;
+  --color-accent: #38bdf8;
+  --color-text: #e5e7eb;
+  --color-muted: #9ca3af;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
