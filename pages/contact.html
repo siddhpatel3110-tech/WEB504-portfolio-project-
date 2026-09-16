@@ -7,51 +7,54 @@
   <link rel="stylesheet" href="../assets/global-styles/reset.css">
   <link rel="stylesheet" href="../assets/global-styles/main.css">
 </head>
+
 <body>
-    <header class="site-header">
+<header class="site-header">
   <div class="container">
     <div class="site-title">SIDDH PATEL</div>
     <nav>
       <ul class="nav-links">
-        <li><a href="../pages/index.html">Home</a></li>
-        <li><a href="../pages/projects.html">Projects</a></li>
-        <li><a href="../pages/skills.html">Skills</a></li>
-        <li><a href="../pages/contact.html">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
+
 <main class="container">
-    <h1 class="section-title">Contact</h1>
+  <h1 class="section-title">Contact</h1>
 
-    <form class="contact-form">
-      <div>
-        <label>Name</label>
-        <input type="text" placeholder="Your name">
-      </div>
+  <form class="contact-form">
+    <div>
+      <label for="name">Name</label>
+      <input id="name" type="text" placeholder="Your name">
+    </div>
 
-      <div>
-        <label>Email</label>
-        <input type="email" placeholder="you@example.com">
-      </div>
+    <div>
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="you@example.com">
+    </div>
 
-      <div>
-        <label>Message</label>
-        <textarea placeholder="Your message"></textarea>
-      </div>
+    <div>
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Your message"></textarea>
+    </div>
 
-      <button type="button">Send (Static)</button>
-    </form>
+    <button type="button">Send (Static)</button>
+  </form>
 
-    <p style="margin-top: 1rem;">
-      Or email me directly:
-      <a href="mailto:siddhpatel3110@gmail.com">siddhpatel3110@gmail.com</a>
-    </p>
-  </main>
- <footer class="site-footer">
+  <p style="margin-top: 1rem;">
+    Or email me directly:
+    <a href="mailto:siddhpatel3110@gmail.com">siddhpatel3110@gmail.com</a>
+  </p>
+</main>
+
+<footer class="site-footer">
   <div class="container">
     <p>&copy; 2026 Siddh Patel — Static Portfolio</p>
   </div>
 </footer>
 </body>
-</html> 
+</html>

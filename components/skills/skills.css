@@ -1,10 +1,33 @@
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
 .skills-layout {
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem;
+  padding: 1rem 0;
 }
 
 @media (min-width: 768px) {
   .skills-layout {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.skills-layout h2 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.skills-layout ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.skills-layout li {
+  margin-bottom: 0.75rem;
+  color: #cbd5e1;
+  font-size: 1rem;
 }
