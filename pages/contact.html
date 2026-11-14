@@ -70,9 +70,9 @@ import {
   ref,
   push,
   onValue,
-  remove
+  remove,
+  update
 }
-
 from "https://www.gstatic.com/firebasejs/13.2.0/firebase-database.js";
 
 const firebaseConfig = {
@@ -145,14 +145,40 @@ onValue(ref(db, "comments"), (snapshot) => {
 
         <p>${data.message}</p>
 
-        <button onclick="deleteComment('${childSnapshot.key}')">
-    Delete
-  </button>
+        <button onclick="editComment(
+'${childSnapshot.key}',
+'${data.message}'
+)">
+  Edit
+</button>
+
+<button onclick="deleteComment(
+'${childSnapshot.key}'
+)">
+  Delete
+</button>
       </div>
 
     `;
   });
 });
+
+window.editComment = function(id, oldMessage) {
+
+  const newMessage = prompt(
+    "Edit your comment:",
+    oldMessage
+  );
+
+  if (newMessage !== null && newMessage !== "") {
+
+    update(ref(db, "comments/" + id), {
+      message: newMessage
+    });
+
+    alert("Comment updated!");
+  }
+};
 
 window.deleteComment = function(id) {
 
